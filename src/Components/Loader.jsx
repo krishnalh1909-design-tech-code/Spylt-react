@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import logo from "../assets/logo.svg";
+import LoaderLogo from "../assets/loader-img.svg";
 
 const Loader = () => {
   const [grow, setGrow] = useState(0);
@@ -45,7 +45,7 @@ const Loader = () => {
 
   return (
     <div className="loader flex items-center justify-center flex-col w-full h-screen bg-[#523122] fixed z-100">
-      <img className="md:w-xs w-[200px] pt-48" src={logo} alt="logo" />
+      <img className="md:w-xs w-[200px] pt-48" src={LoaderLogo} alt="logo" />
       <span className="font-[Antonio] font-bold text-[30px] md:text-5xl pt-40 text-[#F9E9DD] text-center">
         {grow} %
       </span>
