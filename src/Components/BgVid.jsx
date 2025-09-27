@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import BgVideo from "/Spylt-React/src/assets/Videos/main-video.mp4";
+import BgVideo from "../assets/Videos/main-video.mp4";
 
 const BgVid = () => {
   const videoRef = useRef(null);

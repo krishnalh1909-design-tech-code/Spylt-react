@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import logo from "/Spylt-React/src/assets/logo.svg";
+import logo from "../assets/logo.svg";
 
 const Loader = () => {
   const [grow, setGrow] = useState(0);
