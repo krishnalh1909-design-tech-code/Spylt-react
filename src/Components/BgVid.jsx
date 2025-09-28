@@ -5,22 +5,23 @@ const BgVid = () => {
   const videoRef = useRef(null);
 
   useEffect(() => {
-    const timeout = setTimeout(() => {
+    const timer = setTimeout(() => {
       if (videoRef.current) {
         videoRef.current.play().catch((err) => {
-          console.error("Video playback failed:", err);
+          console.error("Video play failed:", err);
         });
       }
     }, 4000);
 
-    return () => clearTimeout(timeout); // Cleanup
+    // Cleanup in case component unmounts
+    return () => clearTimeout(timer);
   }, []);
 
   return (
-    <div className="bgVid h-screen w-full absolute overflow-hidden">
+    <div className="bgVid h-[100vh] w-full absolute overflow-hidden">
       <video
         ref={videoRef}
-        className="h-screen w-full object-cover hidden md:block"
+        className="h-full w-full hidden md:block object-cover"
         muted
         src={BgVideo}
       ></video>

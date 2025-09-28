@@ -1,1 +1,21 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: 'Antonio';
+  src: url('./assets/Fonts/Antonio.woff') format('woff2'),
+}
+
+@font-face {
+  font-family: 'Antonio2';
+  src: url('./assets/Fonts/Antonio2.woff2') format('woff2'),
+}
+
+@media (max-width:500px) {
+  .page2{
+    height: 100vh;
+  }
+
+  .page2 h1{
+    font-size: 12vw;
+  }
+}
