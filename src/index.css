@@ -10,7 +10,7 @@
   src: url('./assets/Fonts/Antonio2.woff2') format('woff2'),
 }
 
-@media (max-width:500px) {
+/* @media (max-width:500px) {
   .page2{
     height: 100vh;
   }
@@ -18,4 +18,4 @@
   .page2 h1{
     font-size: 12vw;
   }
-}
+} */

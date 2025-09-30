@@ -1,5 +1,5 @@
-import BgImg1 from "../assets/bgImg.png"
-import BgImg2 from "../assets/bgImg2.png"
+import BgImg1 from "../assets/Images/bgImg.png"
+import BgImg2 from "../assets/Images/bgImg2.png"
 
 const BgImg = () => {
   return (
