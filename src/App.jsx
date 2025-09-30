@@ -8,7 +8,7 @@ import TextWrapper from "./Components/TextWrapper";
 
 const App = () => {
   return (
-    <div className="">
+    <div className="overflow-hidden">
       <Loader />
       <BgVid />
       <BgImg />
