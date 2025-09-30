@@ -1,10 +1,11 @@
-
 import BgImg from "./Components/BgImg";
 import BgVid from "./Components/BgVid";
 import Flavours from "./Components/Flavours";
 import Hero from "./Components/Hero";
 import Loader from "./Components/Loader";
+import Page4 from "./Components/Page4";
 import TextWrapper from "./Components/TextWrapper";
+
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <Hero />
       <TextWrapper />
       <Flavours />
+      <Page4 />
     </div>
   );
 };

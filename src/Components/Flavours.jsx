@@ -1,18 +1,41 @@
-// import { useEffect, useRef } from "react";
-// import { gsap } from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
-import flavoursdata from "./FlavoursData.js";
+import { useEffect, useRef } from "react";
 
-// gsap.registerPlugin(ScrollTrigger);
+import flavoursdata from "./FlavoursData.js";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Flavours = () => {
   const letters = ["W", "E", "H", "A", "V", "E", "6"];
-  // const flavoursRef = useRef(null);
+  const flavoursRef = useRef(null);
 
-  
+  useEffect(() => {
+    const element = flavoursRef.current;
+
+    const ctx = gsap.context(() => {
+      gsap.to(element, {
+        x: () => -(element.scrollWidth - window.innerWidth), // dynamic scroll distance
+        ease: "power3.inOut",
+        scrollTrigger: {
+          trigger: element,
+          start: "top top",
+          end: () => `+=${element.scrollWidth}`, // dynamically set scroll length
+          scrub: 3, 
+          pin: true,
+          
+        },
+      });
+    }, flavoursRef);
+
+    return () => ctx.revert(); // cleanup
+  }, []);
 
   return (
-    <div className="h-screen w-[400vw] relative bg-[#FAEADE] flex">
+    <div
+      ref={flavoursRef}
+      className="h-screen w-[400vw] relative bg-[#FAEADE] flex"
+    >
       <div className=" we-have h-full w-[60vw] flex flex-col items-center justify-center font-[Antonio] text-[#523122] text-[7vw]">
         <div className="flex">
           {letters.map((char, index) => (
