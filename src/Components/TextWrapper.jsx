@@ -13,7 +13,7 @@ const TextWrapper = () => {
         trigger: containerRef.current,
         start: "-50%",
         end: "50%",
-        scrub: true,
+        scrub: 1,
       },
     });
 

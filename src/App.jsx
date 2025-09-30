@@ -6,6 +6,10 @@ import Loader from "./Components/Loader";
 import Page4 from "./Components/Page4";
 import TextWrapper from "./Components/TextWrapper";
 
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const App = () => {
   return (
