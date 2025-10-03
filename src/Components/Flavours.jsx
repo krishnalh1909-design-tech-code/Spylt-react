@@ -10,6 +10,9 @@ const Flavours = () => {
   const containerRef = useRef(null);
   const letterRef = useRef(null);
 
+  const isMediumScreen = window.innerWidth <= 768;
+
+
   useEffect(() => {
     const ctx = gsap.context(() => {
       const letterElements = letterRef.current.querySelectorAll("h1");
@@ -37,6 +40,15 @@ const Flavours = () => {
       );
 
       // Horizontal scroll pin and animation
+
+
+      if (isMediumScreen) {
+        // Don't initialize animation
+        return;
+      }
+
+
+
       gsap
         .timeline({
           scrollTrigger: {
@@ -65,15 +77,14 @@ const Flavours = () => {
       {/* Left panel with text */}
       <div
         ref={letterRef}
-        className="we-have w-full md:w-[60vw] flex flex-col items-center justify-center font-[Antonio] text-[#523122] text-[10vw] md:text-[7vw] py-10 md:py-0"
+        className="we-have w-full md:w-[48vw] flex flex-col items-center justify-center font-[Antonio] text-[#523122] text-[10vw] md:text-[7vw] py-10 md:py-0"
       >
         <div className="flex flex-wrap justify-center">
           {letters.map((char, index) => (
             <h1
               key={index}
-              className={`inline-block ${
-                index === 2 || index === 6 ? "ml-3 md:ml-5" : ""
-              }`}
+              className={`inline-block ${index === 2 || index === 6 ? "ml-3 md:ml-5" : ""
+                }`}
             >
               {char}
             </h1>
@@ -101,7 +112,7 @@ const Flavours = () => {
           ({ id, containerClasses, bgSrc, bottomImgSrc, topImgSrc }) => (
             <div
               key={id}
-              className={`flavour1 ${containerClasses} w-[80%] md:w-[14%] h-[50vh] md:h-[60vh] rounded-3xl relative mx-auto md:mx-5`}
+              className={`flavour1 ${containerClasses} w-[80%] md:w-[14%] h-[45vw] md:h-[60vh] rounded-3xl relative mx-auto my-6 md:my-5 md:mx-5`}
             >
               <img
                 src={bgSrc}
@@ -111,7 +122,7 @@ const Flavours = () => {
               <img
                 src={bottomImgSrc}
                 alt=""
-                className="absolute bottom-[0%] left-[20.5%] w-[40vw] md:w-[25vw] h-auto"
+                className="absolute bottom-[0%] left-[25.5%] w-[35vw] md:w-[25vw] h-auto"
               />
               <img
                 src={topImgSrc}
