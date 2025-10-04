@@ -17,8 +17,8 @@ const Home = () => {
       <Hero />
       <TextWrapper />
       <Flavours />
-      <Poster />
-      <Wrapper />
+      {/* <Poster /> */}
+      {/* <Wrapper /> */}
     </div>
   )
 }
