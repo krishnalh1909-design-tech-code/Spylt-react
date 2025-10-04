@@ -1,30 +1,25 @@
-import BgImg from "./Components/BgImg";
-import BgVid from "./Components/BgVid";
-import Flavours from "./Components/Flavours";
-import Hero from "./Components/Hero";
-import Loader from "./Components/Loader";
-
-import Poster from "./Components/Poster";
-import TextWrapper from "./Components/TextWrapper";
-
+// App.js
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import Wrapper from "./Components/Wrapper";
+
+
+import Home from "./Pages/Home";
+
+import FlavourDetail from "./Pages/FlavourDetail";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
 const App = () => {
   return (
-    <div className="overflow-hidden">
-      <Loader />
-      <BgVid />
-      <BgImg />
-      <Hero />
-      <TextWrapper />
-      <Flavours />
-      <Poster />
-      <Wrapper />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/flavours/:id" element={<FlavourDetail />} />
+      </Routes>
+    </Router>
   );
 };
 

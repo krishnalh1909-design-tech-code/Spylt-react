@@ -1,8 +1,9 @@
 import { useEffect, useRef } from "react";
-import flavoursdata from "./FlavoursData.js";
+import flavoursdata from "../Components/FlavoursData";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import FlavourCards from "./FlavourCards";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,10 +14,6 @@ const Flavours = () => {
   const flavourRef = useRef(null);
 
   const isMediumScreen = window.innerWidth <= 768;
-
-
-
-
 
   useGSAP(() => {
 
@@ -43,11 +40,8 @@ const Flavours = () => {
     );
 
 
-
-
-
     if (isMediumScreen) {
-      // Don't initialize animation
+
       return;
     }
 
@@ -56,7 +50,7 @@ const Flavours = () => {
         scrollTrigger: {
           trigger: containerRef.current,
           start: "top top",
-          end: "+=3000", // better than using viewport % for long scroll
+          end: "+=3000",
           pin: true,
           scrub: 2,
           // markers: true,
@@ -73,7 +67,7 @@ const Flavours = () => {
       ref={containerRef}
       className="min-h-screen w-[100vw] md:w-[410vw] relative bg-[#FAEADE] flex flex-col md:flex-row"
     >
-      {/* Left panel with text */}
+
       <div
         ref={letterRef}
         className="we-have w-full md:w-[48vw]  flex flex-col items-center justify-center font-[Antonio] text-[#523122] text-[10vw] md:text-[7vw] py-10 md:py-0 leading-[100px]"
@@ -108,33 +102,9 @@ const Flavours = () => {
 
       </div>
 
-      {/* Right panel with flavours */}
-      <div className="flavours w-full h-full md:w-[340vw] flex flex-col md:flex-row items-center justify-between overflow-x-auto md:overflow-hidden">
-        {flavoursdata.map(
-          ({ id, containerClasses, bgSrc, bottomImgSrc, topImgSrc }) => (
-            <div
-              key={id}
-              className={`flavour1 ${containerClasses} w-[80%] md:w-[14%] h-[45vw] md:h-[40%] lg:h-[55%] rounded-3xl relative mx-auto mt-14 mb-3 md:my-5 md:mx-5 md:shrink-0`}
-            >
-              <img
-                src={bgSrc}
-                alt=""
-                className="w-full h-full object-cover rounded-3xl"
-              />
-              <img
-                src={bottomImgSrc}
-                alt=""
-                className="absolute bottom-[0%] left-[25.5%] w-[35vw] md:w-[25vw] lg:h-[35vw]"
-              />
-              <img
-                src={topImgSrc}
-                alt=""
-                className="can absolute top-[-15.5%] left-[7%] w-[60vw] md:w-[37vw]"
-              />
-            </div>
-          )
-        )}
-      </div>
+
+      <FlavourCards />
+
     </div>
   );
 };
