@@ -14,6 +14,8 @@ const flavours = [
       "https://cdn.prod.website-files.com/669a8d6498ba88c08dfd2cd2%2F6707df011a2da77854398f39_Chocolate%20-%20Wide%20FINAL%20%282%29-transcode.mp4",
     details:
       "SPYLT Chocolate Milk is a sweet (but not too sweet) pick-me-up with 60mg of caffeine. Chug up morning, noon, or whenever you need a chocolatey kick in the pants.",
+    posterImg:
+      "https://cdn.prod.website-files.com/6707999f0e8f3bdab42cb624/670e3f5e8a6b1236298f95ec_wraping.webp",
   },
   {
     id: 2,
@@ -29,6 +31,8 @@ const flavours = [
       "https://www.dl.dropboxusercontent.com/scl/fi/ypzhw6nyes4zmfu53rtnm/Strawberry-Wide-FINAL-full.mp4?rlkey=u1hzn0573j44r4uhylzoez5e4&st=2yik6qp7&dl=0",
     details:
       "Well hellooo, creamy dreamy strawberry milk. This nostalgic drink is like your favorite childhood sweet treat… without loads of sugar. But now it’s caffeinated, filled with nutrients, and packed with protein.",
+    posterImg:
+      "https://cdn.prod.website-files.com/6707999f0e8f3bdab42cb624/670e4007abb4626493f2253a_wraping%20(1).webp",
   },
   {
     id: 3,
@@ -44,6 +48,8 @@ const flavours = [
       "https://www.dl.dropboxusercontent.com/scl/fi/0i3fin1js2ulz61jqe119/Vanilla-Wide-FINAL.mp4?rlkey=wrgndgbmtxoma66k2y1sbvjz1&st=5h9zx36p&dl=0",
     details:
       "This lavish and oh-so-creamy Spylt is bursting with vanilla flavor. Made to provide a sweet, satisfying, and protein-packed caffeinated boost without all the sugar.",
+    posterImg:
+      "https://cdn.prod.website-files.com/6707999f0e8f3bdab42cb624/670e4223f03e9bc7e3c520a2_wraping.webp",
   },
   {
     id: 4,
@@ -59,6 +65,8 @@ const flavours = [
       "https://www.dl.dropboxusercontent.com/scl/fi/7bcp6vfeyu7gmow3x1jpb/Cookies-and-Cream_cut.mp4?rlkey=j0mkr5xlj2e0vww772w9ehlsv&st=awxo011z&dl=0",
     details:
       "This lavish and oh-so-creamy Spylt is bursting with vanilla flavor. Made to provide a sweet, satisfying, and protein-packed caffeinated boost without all the sugar.",
+    posterImg:
+      "https://cdn.prod.website-files.com/6707999f0e8f3bdab42cb624/6784f2ee0827d8f0f2b96103_wraping%20(1).webp",
   },
   {
     id: 5,
@@ -74,6 +82,8 @@ const flavours = [
       "https://www.dl.dropboxusercontent.com/scl/fi/urrmod8opitp71owlpc02/Peanut-Butter-Chocolate_cut.mp4?rlkey=76h5ryw84mfafz713cs7s3ie3&st=mpmtnzhc&dl=0",
     details:
       "This lavish and oh-so-creamy Spylt is bursting with vanilla flavor. Made to provide a sweet, satisfying, and protein-packed caffeinated boost without all the sugar.",
+    posterImg:
+      "https://cdn.prod.website-files.com/6707999f0e8f3bdab42cb624/6784fc0e7cfa2a47fd451507_Peanut%20butter%20chocolate_wraping.webp",
   },
   {
     id: 6,
@@ -89,6 +99,8 @@ const flavours = [
       "https://www.dl.dropboxusercontent.com/scl/fi/wiswjghzg5k6pnjo7di6k/MAX-Chocolate-Wide-FINAL-full.mp4?rlkey=azwx0nlkl3ki3zamlc1vwtwz2&st=5j7zdbmc&dl=0",
     details:
       "Chocolate milk with a giant kick. Rich, creamy and smooth, SPYLT Max is your caffeinated compadre. Chug up first thing in the morning, post-workout, or afternoons when those eyelids get heavy.",
+    posterImg:
+      "https://cdn.prod.website-files.com/6707999f0e8f3bdab42cb624/670e40e0d40321b3c6fb3365_wraping.webp",
   },
 ];
 
