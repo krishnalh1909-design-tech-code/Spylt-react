@@ -5,8 +5,8 @@ import BgImg from '../Components/BgImg'
 import Hero from '../Components/Hero'
 import TextWrapper from '../Components/TextWrapper'
 import Flavours from '../Components/Flavours'
-import Poster from '../Components/Poster'
-import Wrapper from '../Components/Wrapper'
+// import Poster from '../Components/Poster'
+// import Wrapper from '../Components/Wrapper'
 
 const Home = () => {
   return (
@@ -17,8 +17,8 @@ const Home = () => {
       <Hero />
       <TextWrapper />
       <Flavours />
-      {/* <Poster /> */}
-      {/* <Wrapper /> */}
+      {/* <Poster />
+      <Wrapper /> */}
     </div>
   )
 }

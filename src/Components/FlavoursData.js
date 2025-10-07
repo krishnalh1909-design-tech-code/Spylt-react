@@ -2,6 +2,7 @@
 const flavours = [
   {
     id: 1,
+    color:"#865A4D",
     name: "CHOCOLATE MILK",
     containerClasses: "ml-[10vw] mr-[10vw] rotate-0 md:rotate-[-5deg]",
     bgSrc:
@@ -16,9 +17,12 @@ const flavours = [
       "SPYLT Chocolate Milk is a sweet (but not too sweet) pick-me-up with 60mg of caffeine. Chug up morning, noon, or whenever you need a chocolatey kick in the pants.",
     posterImg:
       "https://cdn.prod.website-files.com/6707999f0e8f3bdab42cb624/670e3f5e8a6b1236298f95ec_wraping.webp",
+    productImgSrc:
+      "https://cdn.prod.website-files.com/6707999f0e8f3bdab42cb624/670e3f6ab2e9149945ed38dd_Spylt-Chocolate_1%201.webp",
   },
   {
     id: 2,
+    color:"#A02128",
     name: "STRAWBERRY MILK",
     containerClasses: "mr-[10vw] rotate-0  md:rotate-[5deg]",
     bgSrc:
@@ -33,9 +37,12 @@ const flavours = [
       "Well hellooo, creamy dreamy strawberry milk. This nostalgic drink is like your favorite childhood sweet treat… without loads of sugar. But now it’s caffeinated, filled with nutrients, and packed with protein.",
     posterImg:
       "https://cdn.prod.website-files.com/6707999f0e8f3bdab42cb624/670e4007abb4626493f2253a_wraping%20(1).webp",
+    productImgSrc:
+      "https://cdn.prod.website-files.com/6707999f0e8f3bdab42cb624/670e400b0b40a6198d22f3ac_Spylt-Strawberry_1.webp",
   },
   {
     id: 3,
+    color:"#865720",
     name: "VANILLA MILKSHAKE",
     containerClasses: "mr-[10vw] rotate-0 md:rotate-[-5deg]",
     bgSrc:
@@ -50,10 +57,13 @@ const flavours = [
       "This lavish and oh-so-creamy Spylt is bursting with vanilla flavor. Made to provide a sweet, satisfying, and protein-packed caffeinated boost without all the sugar.",
     posterImg:
       "https://cdn.prod.website-files.com/6707999f0e8f3bdab42cb624/670e4223f03e9bc7e3c520a2_wraping.webp",
+    productImgSrc:
+      "https://cdn.prod.website-files.com/6707999f0e8f3bdab42cb624/670e422a1324f686cb7cc2c4_Spylt-Vanilla_1%201.webp",
   },
   {
     id: 4,
     name: "COOKIES & CREAM",
+    color:"#1C4A9A",
     containerClasses: "mr-[10vw] rotate-0 md:rotate-[-5deg]",
     bgSrc:
       "https://cdn.prod.website-files.com/669a8d6498ba88c08dfd2cd2/67852690dac98b3b6bf4f097_bg.svg",
@@ -67,9 +77,12 @@ const flavours = [
       "This lavish and oh-so-creamy Spylt is bursting with vanilla flavor. Made to provide a sweet, satisfying, and protein-packed caffeinated boost without all the sugar.",
     posterImg:
       "https://cdn.prod.website-files.com/6707999f0e8f3bdab42cb624/6784f2ee0827d8f0f2b96103_wraping%20(1).webp",
+    productImgSrc:
+      "https://cdn.prod.website-files.com/6707999f0e8f3bdab42cb624/6784f2f40c83449f202ae21c_Spylt-Cookies-and-Cream_1%20(1).webp",
   },
   {
     id: 5,
+    color:"#7C3C1A",
     name: "PEANUT BUTTER CHOCOLATE",
     containerClasses: "mr-[10vw] rotate-0 md:rotate-[5deg]",
     bgSrc:
@@ -84,9 +97,12 @@ const flavours = [
       "This lavish and oh-so-creamy Spylt is bursting with vanilla flavor. Made to provide a sweet, satisfying, and protein-packed caffeinated boost without all the sugar.",
     posterImg:
       "https://cdn.prod.website-files.com/6707999f0e8f3bdab42cb624/6784fc0e7cfa2a47fd451507_Peanut%20butter%20chocolate_wraping.webp",
+    productImgSrc:
+      "https://cdn.prod.website-files.com/6707999f0e8f3bdab42cb624/6784fcd1d4835f8d7edcb775_Peanut%20butter%20chocolate_cup.webp",
   },
   {
     id: 6,
+    color:"#7C3C1A",
     name: "MAX CHOCOLATE MILK",
     containerClasses: "mr-[10vw] rotate-0 md:rotate-[-5deg]",
     bgSrc:
@@ -101,6 +117,8 @@ const flavours = [
       "Chocolate milk with a giant kick. Rich, creamy and smooth, SPYLT Max is your caffeinated compadre. Chug up first thing in the morning, post-workout, or afternoons when those eyelids get heavy.",
     posterImg:
       "https://cdn.prod.website-files.com/6707999f0e8f3bdab42cb624/670e40e0d40321b3c6fb3365_wraping.webp",
+    productImgSrc:
+      "https://cdn.prod.website-files.com/6707999f0e8f3bdab42cb624/670e40e338fcbfc4d488cd50_Spylt-Max_1%201.webp",
   },
 ];
 

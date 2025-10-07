@@ -1,5 +1,5 @@
-import { useEffect, useRef } from "react";
-import flavoursdata from "../Components/FlavoursData";
+import { useRef } from "react";
+// import flavoursdata from "../Components/FlavoursData";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -16,65 +16,62 @@ const Flavours = () => {
   const isMediumScreen = window.innerWidth <= 768;
 
   useGSAP(() => {
+    const ctx = gsap.context(() => {
+      const letterElements = letterRef.current?.querySelectorAll("h1");
 
-    const letterElements = letterRef.current.querySelectorAll("h1");
-
-    gsap.fromTo(
-      letterElements,
-      {
-        y: 50,
-        opacity: 0,
-      },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 0.6,
-        stagger: 0.05,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: letterRef.current,
-          start: "top 80%",
-          toggleActions: "play none none none",
-        },
+      if (letterElements) {
+        gsap.fromTo(
+          letterElements,
+          { y: 50, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.6,
+            stagger: 0.05,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: letterRef.current,
+              start: "top 80%",
+              toggleActions: "play none none none",
+            },
+          }
+        );
       }
-    );
 
 
-    if (isMediumScreen) {
+      if (!isMediumScreen && containerRef.current) {
+        gsap.timeline({
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top top",
+            end: "+=3000",
+            pin: true,
+            scrub: 2,
+          },
+        }).to(containerRef.current, {
+          x: "-305vw",
+          ease: "power2.inOut",
+        });
+      }
+    }, containerRef);
 
-      return;
-    }
-
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top top",
-          end: "+=3000",
-          pin: true,
-          scrub: 2,
-          // markers: true,
-        },
-      })
-      .to(containerRef.current, {
-        x: "-305vw",
-        ease: "power2.inOut",
-      });
-  });
+    return () => {
+      ctx.revert();
+      ScrollTrigger.refresh();
+    };
+  }, [isMediumScreen]);
 
   return (
     <div
       ref={containerRef}
       className="min-h-screen w-[100vw] md:w-[410vw] relative bg-[#FAEADE] flex flex-col md:flex-row"
     >
-
+      {/* Animated Heading Section */}
       <div
         ref={letterRef}
-        className="we-have w-full md:w-[48vw]  flex flex-col items-center justify-center font-[Antonio] text-[#523122] text-[10vw] md:text-[7vw] py-10 md:py-0 leading-[100px]"
+        className="we-have w-full md:w-[48vw] flex flex-col items-center justify-center font-[Antonio] text-[#523122] text-[10vw] md:text-[7vw] py-10 md:py-0 leading-[100px]"
       >
-
-
-        <div className="flex flex-wrap justify-center  font-extrabold">
+        <div className="flex flex-wrap justify-center font-extrabold">
           {letters.map((char, index) => (
             <h1
               key={index}
@@ -94,17 +91,15 @@ const Flavours = () => {
 
         <div className="freaking font-extrabold flex flex-wrap justify-center text-[10vw] md:text-[6.5vw]">
           {"DELICIOUS FLAVOUR".split("").map((char, index) => (
-            <span key={index} ref={flavourRef} className={char === "S" ? "mr-2 md:mr-3" : ""}>
+            <span key={index} className={char === "S" ? "mr-2 md:mr-3" : ""}>
               {char}
             </span>
           ))}
         </div>
-
       </div>
 
-
+      {/* Horizontal Card Scroll Section */}
       <FlavourCards />
-
     </div>
   );
 };

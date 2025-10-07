@@ -1,6 +1,5 @@
 
 import { Link } from "react-router-dom";
-
 import flavoursdata from "../Components/FlavoursData";
 
 
@@ -9,7 +8,7 @@ const FlavourCards = () => {
     <div className="flavours w-full h-full md:w-[340vw] flex flex-col md:flex-row items-center justify-between overflow-x-auto md:overflow-hidden">
       {flavoursdata.map(({ id, containerClasses, bgSrc, bottomImgSrc, topImgSrc }) => (
         <Link
-            key={id}
+          key={id}
           to={`/flavours/${id}`}
           className={`flavour1 ${containerClasses} w-[80%] md:w-[14%] h-[45vw] md:h-[40%] lg:h-[55%] rounded-3xl relative mx-auto mt-14 mb-3 md:my-5 md:mx-5 md:shrink-0`}
         >

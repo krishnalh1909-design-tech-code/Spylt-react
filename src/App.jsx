@@ -2,10 +2,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-
-
 import Home from "./Pages/Home";
-
 import FlavourDetail from "./Pages/FlavourDetail";
 
 
