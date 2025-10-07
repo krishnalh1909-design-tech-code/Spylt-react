@@ -6,6 +6,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import PosterImg from "../Components/PosterImg";
+import SlidVid from "../Components/SlidVid";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -28,7 +29,7 @@ const FlavourDetail = () => {
           start: "0%",
           end: "+=500",
           pin: true,
-          scrub: true,
+          scrub: 3,
           pinSpacing: true,
         },
       });
@@ -128,9 +129,12 @@ const FlavourDetail = () => {
           </div>
         </div>
 
+        <PosterImg />
+        <SlidVid />
+
       </div>
 
-      <PosterImg />
+
     </>
   );
 };

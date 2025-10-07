@@ -2,7 +2,9 @@
 const flavours = [
   {
     id: 1,
-    color:"#865A4D",
+    color: "#865A4D",
+    bg: "#563424",
+    text:"#C88E64",
     name: "CHOCOLATE MILK",
     containerClasses: "ml-[10vw] mr-[10vw] rotate-0 md:rotate-[-5deg]",
     bgSrc:
@@ -22,7 +24,8 @@ const flavours = [
   },
   {
     id: 2,
-    color:"#A02128",
+    color: "#A02128",
+    bg: "#631217",
     name: "STRAWBERRY MILK",
     containerClasses: "mr-[10vw] rotate-0  md:rotate-[5deg]",
     bgSrc:
@@ -42,7 +45,8 @@ const flavours = [
   },
   {
     id: 3,
-    color:"#865720",
+    color: "#865720",
+    bg: "#865720",
     name: "VANILLA MILKSHAKE",
     containerClasses: "mr-[10vw] rotate-0 md:rotate-[-5deg]",
     bgSrc:
@@ -63,7 +67,8 @@ const flavours = [
   {
     id: 4,
     name: "COOKIES & CREAM",
-    color:"#1C4A9A",
+    color: "#1C4A9A",
+    bg: "#123166",
     containerClasses: "mr-[10vw] rotate-0 md:rotate-[-5deg]",
     bgSrc:
       "https://cdn.prod.website-files.com/669a8d6498ba88c08dfd2cd2/67852690dac98b3b6bf4f097_bg.svg",
@@ -82,7 +87,8 @@ const flavours = [
   },
   {
     id: 5,
-    color:"#7C3C1A",
+    color: "#7C3C1A",
+    bg: "#7C3C1A",
     name: "PEANUT BUTTER CHOCOLATE",
     containerClasses: "mr-[10vw] rotate-0 md:rotate-[5deg]",
     bgSrc:
@@ -102,7 +108,8 @@ const flavours = [
   },
   {
     id: 6,
-    color:"#7C3C1A",
+    color: "#7C3C1A",
+    bg: "#5E382E",
     name: "MAX CHOCOLATE MILK",
     containerClasses: "mr-[10vw] rotate-0 md:rotate-[-5deg]",
     bgSrc:

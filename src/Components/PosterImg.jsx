@@ -28,7 +28,7 @@ const PosterImg = () => {
 
 
 
-      <div className="poster my-1 h-[120vh] md:h-full w-full lg:w-[60vw] flex items-center justify-center relative overflow-hidden">
+      <div className="poster h-[120vh] md:h-full w-full lg:w-[60vw] flex items-center justify-center relative overflow-hidden">
 
         {/* Main Poster Image (always visible) */}
         <div className="absolute rounded-[10px] top-1/2 left-1/2 lg:left-[35%] h-[100%] md:h-[90%] lg:h-[100%] w-[100%] lg:w-[35vw] -translate-x-1/2 -translate-y-1/2 overflow-hidden">
