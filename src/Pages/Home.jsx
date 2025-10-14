@@ -2,9 +2,9 @@
 import Loader from '../Components/Loader'
 import BgVid from '../Components/BgVid'
 import BgImg from '../Components/BgImg'
-import Hero from '../Components/Hero'
-import TextWrapper from '../Components/TextWrapper'
-import Flavours from '../Components/Flavours'
+import Hero from '../Sections/Hero'
+import TextWrapper from '../Sections/TextWrapper'
+import Flavours from '../Sections/Flavours'
 // import Poster from '../Components/Poster'
 // import Wrapper from '../Components/Wrapper'
 

@@ -1,9 +1,9 @@
-import { useRef } from "react";
+import { useRef,useEffect } from "react";
 // import flavoursdata from "../Components/FlavoursData";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import FlavourCards from "./FlavourCards";
+import FlavourCards from "../Components/FlavourCards";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,6 +14,31 @@ const Flavours = () => {
   const flavourRef = useRef(null);
 
   const isMediumScreen = window.innerWidth <= 768;
+
+  useEffect(() => {
+    let prevWidth = window.innerWidth;
+
+    const handleResize = () => {
+      const currentWidth = window.innerWidth;
+
+      const wasMedium = prevWidth <= 768;
+      const isMedium = currentWidth <= 768;
+
+      // If we crossed the medium breakpoint (in either direction)
+      if (wasMedium !== isMedium) {
+        window.location.reload();
+      }
+
+      prevWidth = currentWidth;
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
 
   useGSAP(() => {
     const ctx = gsap.context(() => {
@@ -67,9 +92,9 @@ const Flavours = () => {
       className="min-h-screen w-[100vw] md:w-[410vw] relative bg-[#FAEADE] flex flex-col md:flex-row"
     >
       {/* Animated Heading Section */}
-      <div
+      {/* <div
         ref={letterRef}
-        className="we-have w-full md:w-[48vw] flex flex-col items-center justify-center font-[Antonio] text-[#523122] text-[10vw] md:text-[7vw] py-10 md:py-0 leading-[100px]"
+        className="we-have w-full md:w-[48vw] flex flex-col items-center justify-center font-[Antonio] text-[#523122] text-[10vw] md:text-[7vw] py-10 md:py-0 leading-[100px] bg-amber-300"
       >
         <div className="flex flex-wrap justify-center font-extrabold">
           {letters.map((char, index) => (
@@ -96,7 +121,7 @@ const Flavours = () => {
             </span>
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* Horizontal Card Scroll Section */}
       <FlavourCards />

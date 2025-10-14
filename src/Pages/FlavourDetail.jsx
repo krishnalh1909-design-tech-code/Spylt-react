@@ -5,7 +5,7 @@ import Navbar from '../Components/Navbar';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
-import PosterImg from "../Components/PosterImg";
+import PosterImg from "../Sections/PosterImg";
 import SlidVid from "../Components/SlidVid";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -23,7 +23,7 @@ const FlavourDetail = () => {
     const ctx = gsap.context(() => {
 
       gsap.to([infoRef.current, nameRef.current], {
-        y: -650,
+        y: -800,
         scrollTrigger: {
           trigger: descRef.current,
           start: "0%",
@@ -61,8 +61,7 @@ const FlavourDetail = () => {
 
       <div className="overflow-hidden" key={id}>
         <Navbar />
-
-        <div ref={descRef} className="h-[120vh] w-full overflow-hidden relative">
+        <div ref={descRef} className="h-screen md:h-[120vh] w-full overflow-hidden relative">
           <video
             className="h-[120vh] w-full object-cover"
             autoPlay
@@ -128,9 +127,8 @@ const FlavourDetail = () => {
 
           </div>
         </div>
-
         <PosterImg />
-        <SlidVid />
+        {/* <SlidVid /> */}
 
       </div>
 

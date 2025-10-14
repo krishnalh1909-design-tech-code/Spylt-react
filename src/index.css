@@ -22,4 +22,12 @@
   .poster{
     height: 60vh;
   }
+
+  .tagline1,.tagline2{
+    font-size: 10vw;
+  }
+
+  .tagline2{
+    top:50%;
+  }
 }
