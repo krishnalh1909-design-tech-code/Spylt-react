@@ -10,6 +10,12 @@
   src: url('./assets/Fonts/Antonio2.woff2') format('woff2'),
 }
 
+@media (max-width:500px){
+  .title2{
+    top:32%
+  }
+}
+
 @media (max-width:300px) {
    
   .poster-div{
@@ -23,11 +29,7 @@
     height: 60vh;
   }
 
-  .tagline1,.tagline2{
-    font-size: 10vw;
-  }
-
-  .tagline2{
-    top:50%;
+  .title2{
+    top:28%
   }
 }

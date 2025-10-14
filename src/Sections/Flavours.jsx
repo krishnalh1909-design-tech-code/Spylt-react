@@ -1,9 +1,10 @@
-import { useRef,useEffect } from "react";
+import { useRef, useEffect } from "react";
 // import flavoursdata from "../Components/FlavoursData";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import FlavourCards from "../Components/FlavourCards";
+import TextAnimation from "../Components/TextAnimation";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -91,7 +92,7 @@ const Flavours = () => {
       ref={containerRef}
       className="min-h-screen w-[100vw] md:w-[410vw] relative bg-[#FAEADE] flex flex-col md:flex-row"
     >
-      {/* Animated Heading Section */}
+
       {/* <div
         ref={letterRef}
         className="we-have w-full md:w-[48vw] flex flex-col items-center justify-center font-[Antonio] text-[#523122] text-[10vw] md:text-[7vw] py-10 md:py-0 leading-[100px] bg-amber-300"
@@ -108,7 +109,7 @@ const Flavours = () => {
           ))}
         </div>
 
-        <div className="freaking h-[125px] font-extrabold flex flex-wrap justify-center text-[10vw] md:text-[7vw] bg-red-200 rotate-[-3deg]">
+        {/* <div className="freaking h-[125px] font-extrabold flex flex-wrap justify-center text-[10vw] md:text-[7vw] bg-red-200 rotate-[-3deg]">
           {"FREAKING".split("").map((char, index) => (
             <span key={index}>{char}</span>
           ))}
@@ -120,10 +121,9 @@ const Flavours = () => {
               {char}
             </span>
           ))}
-        </div>
-      </div> */}
+        </div> */}
+      {/* </div> */} 
 
-      {/* Horizontal Card Scroll Section */}
       <FlavourCards />
     </div>
   );

@@ -1,7 +1,5 @@
-
 import { Link } from "react-router-dom";
 import flavoursdata from "../Components/FlavoursData";
-
 
 const FlavourCards = () => {
   return (
