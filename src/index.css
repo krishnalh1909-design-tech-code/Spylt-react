@@ -1,35 +1,101 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: 'Antonio';
-  src: url('./assets/Fonts/Antonio.woff') format('woff2'),
+  font-family: "Antonio";
+  src: url("./assets/Fonts/Antonio.woff") format("woff2");
 }
 
 @font-face {
-  font-family: 'Antonio2';
-  src: url('./assets/Fonts/Antonio2.woff2') format('woff2'),
+  font-family: "Antonio2";
+  src: url("./assets/Fonts/Antonio2.woff2") format("woff2");
 }
 
-@media (max-width:500px){
-  .title2{
-    top:32%
+@media (max-width: 1100px) {
+  .hero-desc {
+    width: 60vw;
+    font-size: 25px;
+  }
+
+  .title2 {
+    top: 43%;
   }
 }
 
-@media (max-width:300px) {
-   
-  .poster-div{
+@media (min-width: 700px) and (max-width: 900px) {
+  .hero-desc {
+    width: 60vw;
+    font-size: 25px;
+  }
+
+  .title2 {
+    top: 45%;
+  }
+}
+
+@media  (min-width: 1000px) and (max-width: 1024px) {
+  .flavours {
+    height: max-content;
+    width: 100vw;
+    flex-direction: column;
+  }
+
+  .card-bg {
+    width: 80%;
+    height: 40vw;
+    rotate: 0deg;
+    margin: 100px 0px;
+  }
+
+  .bottomSrc {
+    width: 35vw;
+    height: max-content;
+  }
+
+  .snacks {
+    width: 60vw;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero-desc {
+    top: 60%;
+    width: 70vw;
+    font-size: 20px;
+  }
+  .title2 {
+    top: 33%;
+  }
+}
+
+@media (max-width: 500px) {
+  .title2 {
+    top: 32%;
+  }
+}
+
+@media (max-width: 400px) {
+  .title {
+    top: 18%;
+  }
+
+  .title2 {
+    top: 30%;
+  }
+}
+
+@media (max-width: 300px) {
+  .poster-div {
     height: 120vh;
   }
 
-  .poster-det{
-   height: 60vh;
+  .poster-det {
+    height: 60vh;
   }
-  .poster{
+  .poster {
     height: 60vh;
   }
 
-  .title2{
-    top:28%
+  .title2 {
+    top: 30%;
   }
 }

@@ -7,7 +7,7 @@ const BgImg = () => {
       className="bg-[#F9E9DD] bg-cover bg-center h-screen w-full absolute overflow-hidden block md:hidden"
       style={{ backgroundImage: `url(${BgImg1})` }}
     >
-      <div className="sImg h-[40vh] w-full scale-140 absolute bottom-[0%]">
+      <div className="sImg h-[40vh] w-full scale-140 absolute bottom-[-10%]">
         <img className="h-full w-full object-contain" src={BgImg2} alt="Background Detail" />
       </div>
     </div>

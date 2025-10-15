@@ -14,7 +14,7 @@ const Flavours = () => {
   const letterRef = useRef(null);
   const flavourRef = useRef(null);
 
-  const isMediumScreen = window.innerWidth <= 768;
+  const isMediumScreen = window.innerWidth <= 1024;
 
   useEffect(() => {
     let prevWidth = window.innerWidth;
@@ -22,8 +22,8 @@ const Flavours = () => {
     const handleResize = () => {
       const currentWidth = window.innerWidth;
 
-      const wasMedium = prevWidth <= 768;
-      const isMedium = currentWidth <= 768;
+      const wasMedium = prevWidth <= 1024;
+      const isMedium = currentWidth <= 1024;
 
       // If we crossed the medium breakpoint (in either direction)
       if (wasMedium !== isMedium) {
@@ -64,7 +64,6 @@ const Flavours = () => {
         );
       }
 
-
       if (!isMediumScreen && containerRef.current) {
         gsap.timeline({
           scrollTrigger: {
@@ -72,11 +71,10 @@ const Flavours = () => {
             start: "top top",
             end: "+=3000",
             pin: true,
-            scrub: 2,
+            scrub: true,
           },
         }).to(containerRef.current, {
-          x: "-305vw",
-          ease: "power2.inOut",
+          x: "-300vw",
         });
       }
     }, containerRef);
@@ -90,7 +88,7 @@ const Flavours = () => {
   return (
     <div
       ref={containerRef}
-      className="min-h-screen w-[100vw] md:w-[410vw] relative bg-[#FAEADE] flex flex-col md:flex-row"
+      className="flavours min-h-screen w-[100vw] md:w-[100vw] md:flex-col lg:w-[410vw] relative bg-[#FAEADE] flex flex-col lg:flex-row"
     >
 
       {/* <div
@@ -109,7 +107,7 @@ const Flavours = () => {
           ))}
         </div>
 
-        {/* <div className="freaking h-[125px] font-extrabold flex flex-wrap justify-center text-[10vw] md:text-[7vw] bg-red-200 rotate-[-3deg]">
+        <div className="freaking h-[125px] font-extrabold flex flex-wrap justify-center text-[10vw] md:text-[7vw] bg-red-200 rotate-[-3deg]">
           {"FREAKING".split("").map((char, index) => (
             <span key={index}>{char}</span>
           ))}
@@ -121,8 +119,8 @@ const Flavours = () => {
               {char}
             </span>
           ))}
-        </div> */}
-      {/* </div> */} 
+        </div>
+      </div> */}
 
       <FlavourCards />
     </div>
