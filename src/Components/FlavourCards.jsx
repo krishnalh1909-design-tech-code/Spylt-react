@@ -3,12 +3,12 @@ import flavoursdata from "../Components/FlavoursData";
 
 const FlavourCards = () => {
   return (
-    <div className="flavours w-full h-full py-7 md:w-[100vw] lg:h-screen lg:w-[310vw] flex flex-col md:flex-col lg:flex-row items-center justify-between overflow-x-auto md:overflow-hidden">
+    <div className="flavours w-full h-full py-7 md:w-[100vw] lg:h-screen lg:w-[5000px] flex flex-col md:flex-col lg:flex-row items-center justify-between overflow-x-auto md:overflow-hidden">
       {flavoursdata.map(({ id, containerClasses, bgSrc, bottomImgSrc, topImgSrc }) => (
         <Link
           key={id}
           to={`/flavours/${id}`}
-          className={`flavour1 ${containerClasses} card-bg w-[80%] h-[45vw] lg:w-[14%] lg:h-[50vh] rounded-3xl relative mx-auto mt-14 mb-3 lg:mt-10 lg:mx-10 lg:shrink-0`}
+          className={`flavour1 ${containerClasses} card-bg w-[80%] h-[45vw] lg:w-[14%] lg:h-[55vh] rounded-3xl relative mx-auto mt-14 mb-3 lg:mt-10 lg:mx-10 lg:shrink-0`}
         >
           <img
             src={bgSrc}

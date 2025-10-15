@@ -8,14 +8,14 @@ const Poster = () => {
       <div className="h-[60vh] md:h-[60vh] overflow-hidden absolute top-0 z-10">
 
         <img
-          className=" object-cover object-left"
+          className="object-cover object-left"
           src={MeltingBg}
           alt=""
         />
 
       </div>
 
-      <div className="z-50 absolute bottom-0 md:bottom-[0%] h-[50vh] md:h-[80vh] lg:h-[100vh] w-full">
+      <div className="z-50 absolute bottom-0 md:bottom-[0%] h-[55vh] md:h-[80vh] lg:h-[100vh] w-full">
         
         <img
           className="z-50 absolute bottom-0 md:bottom-[0%] h-full w-full object-cover"
