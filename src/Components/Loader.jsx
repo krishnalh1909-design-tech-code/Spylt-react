@@ -46,12 +46,12 @@ const Loader = () => {
   return (
     <div className="loader flex items-center justify-center flex-col w-full h-screen bg-[#523122] fixed z-100">
       <img className="md:w-xs w-[200px] pt-48" src={LoaderLogo} alt="logo" />
-      <span className="font-[Antonio] font-bold text-[30px] md:text-5xl pt-40 text-[#F9E9DD] text-center">
+      <span className="font-[Antonio] font-bold text-[30px] md:text-5xl pt-38 text-[#F9E9DD] text-center">
         {grow} %
       </span>
       <div
         ref={showRef}
-        className="h-2.5 bg-[#F9E9DD] mt-7"
+        className="h-2.5 bg-[#F9E9DD] mt-5"
         style={{ width: "0px", transition: "width 0.03s linear" }}
       ></div>
     </div>

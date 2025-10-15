@@ -1,4 +1,5 @@
-import React, { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
+import { useLenis } from '../Components/useLenis';
 import { useParams } from "react-router-dom";
 import flavoursdata from "../Components/FlavoursData";
 import Navbar from '../Components/Navbar';
@@ -11,6 +12,7 @@ import SlidVid from "../Components/SlidVid";
 gsap.registerPlugin(ScrollTrigger);
 
 const FlavourDetail = () => {
+  useLenis();
   const descRef = useRef();
   const infoRef = useRef();
   const nameRef = useRef();

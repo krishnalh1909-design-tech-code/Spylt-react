@@ -6,8 +6,8 @@ import Hero from '../Sections/Hero'
 import TextWrapper from '../Sections/TextWrapper'
 import Flavours from '../Sections/Flavours'
 import Poster from '../Sections/Poster'
-import Wrapper from '../Sections/Wrapper'
-import VidSection from '../Sections/VidSection';
+import WrapperAndVid from '../Sections/WrapperAndVid';
+
 
 const Home = () => {
   useLenis();
@@ -20,8 +20,7 @@ const Home = () => {
       <TextWrapper />
       <Flavours />
       <Poster />
-      <Wrapper /> 
-      <VidSection />
+      <WrapperAndVid />
     </div>
   )
 }
