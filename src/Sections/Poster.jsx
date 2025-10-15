@@ -3,9 +3,9 @@ import TextAnimation from "../Components/TextAnimation"
 
 const Poster = () => {
   return (
-    <div className="page3 w-full h-[90vh] md:h-[110vh] relative bg-[#E0D1B8] mt-[-10px] overflow-hidden">
+    <div className="page3 w-full h-[90vh] md:h-[110vh] lg:h-[110vh] relative bg-[#E0D1B8] mt-[-10px] overflow-hidden">
 
-      <div className="h-[60vh] overflow-hidden absolute top-0 z-10">
+      <div className="h-[60vh] md:h-[60vh] overflow-hidden absolute top-0 z-10">
 
         <img
           className=" object-cover object-left"
@@ -15,7 +15,7 @@ const Poster = () => {
 
       </div>
 
-      <div className="z-50 absolute bottom-0 md:bottom-[0%] h-[50vh] md:h-[100vh] w-full">
+      <div className="z-50 absolute bottom-0 md:bottom-[0%] h-[50vh] md:h-[80vh] lg:h-[100vh] w-full">
         
         <img
           className="z-50 absolute bottom-0 md:bottom-[0%] h-full w-full object-cover"
@@ -23,6 +23,8 @@ const Poster = () => {
           alt=""
         />
       </div>
+
+      
 
 
 

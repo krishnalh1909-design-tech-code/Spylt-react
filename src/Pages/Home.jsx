@@ -6,7 +6,7 @@ import Hero from '../Sections/Hero'
 import TextWrapper from '../Sections/TextWrapper'
 import Flavours from '../Sections/Flavours'
 import Poster from '../Sections/Poster'
-// import Wrapper from '../Components/Wrapper'
+import Wrapper from '../Components/Wrapper'
 
 const Home = () => {
   useLenis();
@@ -19,7 +19,7 @@ const Home = () => {
       <TextWrapper />
       <Flavours />
       <Poster />
-      {/* <Wrapper />  */}
+      <Wrapper /> 
     </div>
   )
 }
