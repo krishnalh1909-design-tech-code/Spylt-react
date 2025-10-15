@@ -7,6 +7,7 @@ import TextWrapper from '../Sections/TextWrapper'
 import Flavours from '../Sections/Flavours'
 import Poster from '../Sections/Poster'
 import Wrapper from '../Sections/Wrapper'
+import VidSection from '../Sections/VidSection';
 
 const Home = () => {
   useLenis();
@@ -20,6 +21,7 @@ const Home = () => {
       <Flavours />
       <Poster />
       <Wrapper /> 
+      <VidSection />
     </div>
   )
 }

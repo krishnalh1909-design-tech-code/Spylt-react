@@ -6,13 +6,13 @@ const Wrapper = () => {
       className="page4 w-full h-screen md:h-screen lg:h-[130vh] flex flex-col gap-3 items-center justify-center bg-[#222123] font-bold"
     >
 
-      <div className="font-[Antonio] text-[#E7CFBD] font-light text-2xl">
+      <div className="font-[Antonio] text-[#E7CFBD] font-light text-xl md:text-2xl">
         <p>
           Unlock the Advantages:
         </p>
       </div>
 
-      <div className="font-[Antonio] text-[#E7CFBD] font-light text-2xl">
+      <div className="font-[Antonio] text-[#E7CFBD] font-light text-xl md:text-2xl">
         <p>
           Explore the Key Benefits of Choosing SPYLT
         </p>
@@ -40,7 +40,7 @@ const Wrapper = () => {
 
       </div>
 
-      <div className="font-[Antonio] text-[#E7CFBD] font-light text-2xl">
+      <div className="font-[Antonio] text-[#E7CFBD] font-light text-xl md:text-2xl">
         <p>And much more...</p>
       </div>
 

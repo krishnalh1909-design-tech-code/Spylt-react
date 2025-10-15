@@ -33,6 +33,16 @@
 }
 
 @media  (min-width: 1000px) and (max-width: 1024px) {
+
+  .title{
+    top: 20%;
+  }
+
+  .title2 {
+    top: 45%;
+  }
+
+
   .flavours {
     height: max-content;
     width: 100vw;
