@@ -3,7 +3,8 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import BgVideo from "../assets/Videos/main-video.mp4";
 import { useRef } from "react";
-import CardVid1 from "../assets/Videos/CardVideos/CardVid1.mp4"
+// import CardVid1 from "../assets/Videos/CardVideos/CardVid1.mp4"
+import CardData from "../Components/CardData";
 // import BgVideo from "../assets/Videos/main-video.mp4";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -109,44 +110,20 @@ const VidSection = () => {
         </h1>
         <h1 ref={talkRef} className="heading3 text-[20vw]">TALKING</h1>
 
-        <div className="cards overflow-hidden rotate-[0deg] lg:rotate-[-5deg] rounded-2xl h-[75vh] w-[70vw] lg:w-[20vw] absolute top-[37%] left-[15%] lg:left-[5%]">
-          <video autoPlay loop muted className="w-full h-full object-cover">
-            <source src={CardVid1} type="video/mp4" />
-          </video>
-        </div>
+        {CardData.map(({ rotate, left, video }, index) => (
+          <div
+            key={index}
+            className={`cards overflow-hidden rounded-2xl h-[75vh] w-[70vw] lg:w-[20vw] absolute top-[37%] left-[15%] lg:left-[${left}]`}
+            style={{
+              transform: `rotate(${rotate}deg)`,
 
-        <div className="cards overflow-hidden rotate-[1deg] lg:rotate-[-5deg] rounded-2xl h-[75vh] w-[70vw] lg:w-[20vw]  absolute top-[37%] left-[15%] lg:left-[15%]">
-          <video autoPlay loop muted className="w-full h-full object-cover">
-            <source src={CardVid1} type="video/mp4" />
-          </video>
-        </div>
-
-        <div className="cards overflow-hidden rotate-[2deg] lg:rotate-[-5deg] rounded-2xl h-[75vh] w-[70vw] lg:w-[20vw] absolute top-[37%] left-[15%] lg:left-[30%]">
-          <video autoPlay loop muted className="w-full h-full object-cover">
-            <source src={CardVid1} type="video/mp4" />
-          </video>
-        </div>
-
-        <div className="cards overflow-hidden rotate-[3deg] lg:rotate-[-5deg] rounded-2xl h-[75vh] w-[70vw] lg:w-[20vw] absolute top-[37%] left-[15%] lg:left-[45%]">
-          <video autoPlay loop muted className="w-full h-full object-cover">
-            <source src={CardVid1} type="video/mp4" />
-          </video>
-        </div>
-
-        <div className="cards overflow-hidden rotate-[4deg] lg:rotate-[-5deg] rounded-2xl h-[75vh] w-[70vw] lg:w-[20vw] absolute top-[37%] left-[15%] lg:left-[60%]">
-          <video autoPlay loop muted className="w-full h-full object-cover">
-            <source src={CardVid1} type="video/mp4" />
-          </video>
-        </div>
-
-
-        <div className="cards overflow-hidden rotate-[5deg] lg:rotate-[-5deg] rounded-2xl h-[75vh] w-[70vw] lg:w-[20vw] absolute top-[37%] left-[15%] lg:left-[75%]">
-          <video autoPlay loop muted className="w-full h-full object-cover">
-            <source src={CardVid1} type="video/mp4" />
-          </video>
-        </div>
-
-
+            }}
+          >
+            <video autoPlay loop muted className="w-full h-full object-cover">
+              <source src={video} type="video/mp4" />
+            </video>
+          </div>
+        ))}
       </div>
 
     </div>
@@ -158,66 +135,4 @@ export default VidSection;
 
 
 
-{/* <div
-          class="cards rotate-[-5deg] overflow-hidden rounded-2xl h-[73vh] w-[20vw] border-5 border-[#FAEADE] absolute top-[37%]"
-        >
-          <video
-            autoplay
-            muted
-            src="https://cdn.prod.website-files.com/669a8d6498ba88c08dfd2cd2%2F673db5c1208c8a25762bb619_1_Madison_1-transcode.mp4"
-          ></video>
-        </div>
 
-        <div
-          class="cards rotate-[5deg] rounded-2xl h-[73vh] w-[20vw] border-5 border-[#FAEADE] absolute top-[39%] left-[15%] z-[10] overflow-hidden"
-        >
-          <video
-            autoplay
-            muted
-            src="https://cdn.prod.website-files.com/669a8d6498ba88c08dfd2cd2%2F673db740f86577023a832835_1_AlexanderM_1-transcode.mp4"
-          ></video>
-        </div>
-
-        <div
-          class="cards rotatr[-5deg] overflow-hidden rounded-2xl h-[73vh] w-[20vw] border-5 border-[#FAEADE] absolute top-[35%] left-[30%] z-[20]"
-        >
-          <video
-            autoplay
-            muted
-            src="https://cdn.prod.website-files.com/669a8d6498ba88c08dfd2cd2%2F673db80618ee4a59f2efb198_1_AndrewC_1-transcode.mp4"
-          ></video>
-        </div>
-
-        <div
-          class="overflow-hidden rotate-[5deg] cards rounded-2xl h-[73vh] w-[20vw] border-5 border-[#FAEADE] absolute top-[37%] left-[45%] z-[30]"
-        >
-          <video
-            autoplay
-            muted
-            src="https://cdn.prod.website-files.com/669a8d6498ba88c08dfd2cd2%2F673db855456668dfc4c52615_1_BryanK_1-transcode.mp4"
-          ></video>
-        </div>
-
-        <div
-          class="cards rotate[5deg] overflow-hidden rounded-2xl h-[73vh] w-[20vw] border-5 border-[#FAEADE] absolute top-[37%] left-[60%] z-[40]"
-        >
-          <video
-            autoplay
-            muted
-            src="https://cdn.prod.website-files.com/669a8d6498ba88c08dfd2cd2%2F673db8a83056c32978e4c03a_1_ChrisS_1-transcode.mp4"
-          ></video>
-        </div>
-
-        <div
-          class="cards rotate-[-5deg] overflow-hidden rounded-2xl h-[73vh] w-[20vw] border-5 border-[#FAEADE] absolute top-[39%] left-[75%] z-[50]"
-        >
-          <video
-            autoplay
-            muted
-            src="https://cdn.prod.website-files.com/669a8d6498ba88c08dfd2cd2%2F673db8e8928a767c7d03f23e_1_Devante_1-transcode.mp4"
-          ></video>
-        </div>
-
-        <div class="cards rounded-2xl overflow-hidden h-[73vh] w-[20vw] border-2 border-amber-300 absolute top-[45%] left-[90%] z-[60]">
-              <video autoplay muted src="https://cdn.prod.website-files.com/669a8d6498ba88c08dfd2cd2%2F673db855456668dfc4c52615_1_BryanK_1-transcode.mp4"></video>
-        </div>  */}
