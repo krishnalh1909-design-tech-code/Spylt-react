@@ -7,7 +7,7 @@ export const useLenis = () => {
     const lenis = new Lenis({
       duration: 2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // smooth
-      smooth: true,
+      smooth: 5,
       smoothTouch: false,
     });
 

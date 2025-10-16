@@ -3,8 +3,8 @@ import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import FlavourCards from "../Components/FlavourCards";
-import TextAnimation from "../Components/TextAnimation";
+import FlavourCards from "../../Components/FlavourCards";
+import TextAnimation from "../../Components/TextAnimation";
 
 gsap.registerPlugin(ScrollTrigger);
 

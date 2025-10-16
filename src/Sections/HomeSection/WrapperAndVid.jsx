@@ -1,6 +1,6 @@
-import React from 'react'
-import Wrapper from '../Components/Wrapper'
-import VidSection from '../Components/VidSection'
+
+import Wrapper from '../../Components/Wrapper'
+import VidSection from '../../Components/VidSection'
 
 const WrapperAndVid = () => {
   return (

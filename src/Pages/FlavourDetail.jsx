@@ -7,7 +7,12 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import PosterImg from "../Sections/PosterImg";
-import SlidVid from "../Components/SlidVid";
+import Flavours from '../Sections/HomeSection/Flavours'
+// import SlidVid from "../Components/SlidVid";
+// import WrapperAndVid from "../Sections/HomeSection/WrapperAndVid";
+// import Footer from "../Components/Footer";
+// import Wrapper from "../Components/Wrapper";
+// import VidSection from "../Components/VidSection";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -16,8 +21,8 @@ const FlavourDetail = () => {
   const descRef = useRef();
   const infoRef = useRef();
   const nameRef = useRef();
-  const { id } = useParams();
-  const [flavour, setFlavour] = useState(null);
+  const { id } = useParams(); // For routes id
+  const [flavour, setFlavour] = useState(null); // flavours
 
   useGSAP(() => {
     if (!descRef.current || !infoRef.current) return;
@@ -60,7 +65,6 @@ const FlavourDetail = () => {
 
   return (
     <>
-
       <div className="overflow-hidden" key={id}>
         <Navbar />
         <div ref={descRef} className="h-screen md:h-[120vh] w-full overflow-hidden relative">
@@ -130,11 +134,13 @@ const FlavourDetail = () => {
           </div>
         </div>
         <PosterImg />
-        {/* <SlidVid /> */}
+        <Flavours />
+
+         {/* <SlidVid /> */}
+        {/* <VidSection />
+        <Footer /> */}
 
       </div>
-
-
     </>
   );
 };
