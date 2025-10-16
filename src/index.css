@@ -74,6 +74,11 @@
   .textBox {
     height: 70vh;
   }
+
+  .cards{
+    width: 70vw;
+    left: 15%;
+  }
 }
 
 @media (max-width: 700px) {

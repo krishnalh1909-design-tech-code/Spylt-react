@@ -37,7 +37,7 @@ const VidSection = () => {
         scrollTrigger: {
           trigger: containerRef.current,
           start: "top top",
-          end: "+=3000",
+          end: "+=3500",
           scrub: 2,
           pin: true,
         },
@@ -45,30 +45,38 @@ const VidSection = () => {
 
       tl2
         .to(videoRef.current, {
+          delay: 1,
+          duration: 4,
           width: "100%",
           height: "100vh",
           borderRadius: "0%",
-          ease: "none",
+          ease: "linear",
         })
         .to(headRef.current, {
-          delay: 1.5,
-          duration: 2,
+          delay: 1,
+          duration: 4,
           top: "-50%",
+          ease: "linear"
         }, "a")
         .from(whatRef.current, {
-          delay: 1.5,
-          x: -350
+          delay: 1,
+          duration: 4,
+          x: -350,
+          ease: "power1.inOut"
         }, "a")
         .from(talkRef.current, {
-          delay: 1.5,
-          x: 250
+          delay: 1,
+          duration: 4,
+          x: 250,
+          ease: "power1.inOut"
         }, "a")
         .from(".cards", {
-          y: 700,
-          x: 500,
+          top: "110%",
+          left: "50%",
           duration: 3,
           ease: "power3",
-          stagger: 2
+          stagger: 2,
+          ease: "power1.inOut"
         });
 
     }, containerRef); // Scope animations to this component
@@ -101,38 +109,38 @@ const VidSection = () => {
         </h1>
         <h1 ref={talkRef} className="heading3 text-[20vw]">TALKING</h1>
 
-        <div className="cards overflow-hidden rotate-[-3deg] lg:rotate-[-5deg] rounded-2xl h-[75vh] w-[20vw] absolute top-[37%] left-[5%] bg-amber-300">
+        <div className="cards overflow-hidden rotate-[0deg] lg:rotate-[-5deg] rounded-2xl h-[75vh] w-[70vw] lg:w-[20vw] absolute top-[37%] left-[15%] lg:left-[5%]">
           <video autoPlay loop muted className="w-full h-full object-cover">
             <source src={CardVid1} type="video/mp4" />
           </video>
         </div>
 
-        <div className="cards overflow-hidden rotate-[-3deg] lg:rotate-[-5deg] rounded-2xl h-[75vh] w-[20vw] absolute top-[37%] left-[15%]  bg-amber-300">
+        <div className="cards overflow-hidden rotate-[1deg] lg:rotate-[-5deg] rounded-2xl h-[75vh] w-[70vw] lg:w-[20vw]  absolute top-[37%] left-[15%] lg:left-[15%]">
           <video autoPlay loop muted className="w-full h-full object-cover">
             <source src={CardVid1} type="video/mp4" />
           </video>
         </div>
 
-        <div className="cards overflow-hidden rotate-[-3deg] lg:rotate-[-5deg] rounded-2xl h-[75vh] w-[20vw] absolute top-[37%] left-[30%]  bg-amber-300">
+        <div className="cards overflow-hidden rotate-[2deg] lg:rotate-[-5deg] rounded-2xl h-[75vh] w-[70vw] lg:w-[20vw] absolute top-[37%] left-[15%] lg:left-[30%]">
           <video autoPlay loop muted className="w-full h-full object-cover">
             <source src={CardVid1} type="video/mp4" />
           </video>
         </div>
 
-        <div className="cards overflow-hidden rotate-[-3deg] lg:rotate-[-5deg] rounded-2xl h-[75vh] w-[20vw] absolute top-[37%] left-[45%]  bg-amber-300">
+        <div className="cards overflow-hidden rotate-[3deg] lg:rotate-[-5deg] rounded-2xl h-[75vh] w-[70vw] lg:w-[20vw] absolute top-[37%] left-[15%] lg:left-[45%]">
           <video autoPlay loop muted className="w-full h-full object-cover">
             <source src={CardVid1} type="video/mp4" />
           </video>
         </div>
 
-        <div className="cards overflow-hidden rotate-[-3deg] lg:rotate-[-5deg] rounded-2xl h-[75vh] w-[20vw] absolute top-[37%] left-[60%]  bg-amber-300">
+        <div className="cards overflow-hidden rotate-[4deg] lg:rotate-[-5deg] rounded-2xl h-[75vh] w-[70vw] lg:w-[20vw] absolute top-[37%] left-[15%] lg:left-[60%]">
           <video autoPlay loop muted className="w-full h-full object-cover">
             <source src={CardVid1} type="video/mp4" />
           </video>
         </div>
 
 
-        <div className="cards overflow-hidden rotate-[-3deg] lg:rotate-[-5deg] rounded-2xl h-[75vh] w-[20vw] absolute top-[37%] left-[75%]  bg-amber-300">
+        <div className="cards overflow-hidden rotate-[5deg] lg:rotate-[-5deg] rounded-2xl h-[75vh] w-[70vw] lg:w-[20vw] absolute top-[37%] left-[15%] lg:left-[75%]">
           <video autoPlay loop muted className="w-full h-full object-cover">
             <source src={CardVid1} type="video/mp4" />
           </video>

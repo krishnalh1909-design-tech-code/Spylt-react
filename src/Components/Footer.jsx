@@ -16,7 +16,7 @@ const Footer = () => {
         className="w-full h-screen object-cover absolute top-0"
         autoPlay
         muted
-        loop
+
         playsInline
         src="https://www.dl.dropboxusercontent.com/scl/fi/plc5z9ncgq0y2x21c84s8/splash3.webm?rlkey=4zzvzi1nw77o1zs3cnkmxlanx&st=d1hnytz0&dl=0"
       />
