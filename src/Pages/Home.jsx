@@ -7,6 +7,7 @@ import TextWrapper from '../Sections/TextWrapper'
 import Flavours from '../Sections/Flavours'
 import Poster from '../Sections/Poster'
 import WrapperAndVid from '../Sections/WrapperAndVid';
+import Footer from '../Components/Footer';
 
 
 const Home = () => {
@@ -21,6 +22,7 @@ const Home = () => {
       <Flavours />
       <Poster />
       <WrapperAndVid />
+      <Footer />
     </div>
   )
 }
