@@ -110,13 +110,12 @@ const VidSection = () => {
         </h1>
         <h1 ref={talkRef} className="heading3 text-[20vw]">TALKING</h1>
 
-        {CardData.map(({ rotate, left, video }, index) => (
+        {CardData.map(({ rotate, video }, index) => (
           <div
             key={index}
-            className={`cards overflow-hidden rounded-2xl h-[75vh] w-[70vw] lg:w-[20vw] absolute top-[37%] left-[15%] lg:left-[${left}]`}
+            className={`cards overflow-hidden rounded-2xl h-[75vh] w-[70vw] lg:w-[20vw] absolute top-[37%] left-[15%] lg:left-[50%] lg:-translate-x-1/2`}
             style={{
               transform: `rotate(${rotate}deg)`,
-
             }}
           >
             <video autoPlay loop muted className="w-full h-full object-cover">
