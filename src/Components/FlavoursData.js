@@ -6,7 +6,7 @@ const flavours = [
     bg: "#563424",
     text: "#C88E64",
     name: "CHOCOLATE MILK",
-    containerClasses: "ml-[10vw] mr-[10vw] rotate-0 lg:rotate-[-5deg]",
+    containerClasses: "ml-[10vw] mr-[10vw] rotate-0 ",
     bgSrc:
       "https://cdn.prod.website-files.com/669a8d6498ba88c08dfd2cd2/66a38861b437bbd63315a8e4_bg.svg",
     bottomImgSrc:
@@ -28,7 +28,7 @@ const flavours = [
     bg: "#631217",
     text: "#F7ADA7",
     name: "STRAWBERRY MILK",
-    containerClasses: "mr-[10vw] rotate-0  lg:rotate-[5deg]",
+    containerClasses: "mr-[10vw] rotate-0 ",
     bgSrc:
       "https://cdn.prod.website-files.com/669a8d6498ba88c08dfd2cd2/66a39e28663ed972b88b9b18_bg3.svg",
     bottomImgSrc:
@@ -50,7 +50,7 @@ const flavours = [
     bg: "#865720",
     text: "#FACD75",
     name: "VANILLA MILKSHAKE",
-    containerClasses: "mr-[10vw] rotate-0 lg:rotate-[-5deg]",
+    containerClasses: "mr-[10vw] rotate-0 ",
     bgSrc:
       "https://cdn.prod.website-files.com/669a8d6498ba88c08dfd2cd2/66a39e575dee3e2ebb3fef8c_bg4.svg",
     bottomImgSrc:
@@ -72,7 +72,7 @@ const flavours = [
     color: "#1C4A9A",
     bg: "#123166",
     text: "#3284C6",
-    containerClasses: "mr-[10vw] rotate-0 lg:rotate-[-5deg]",
+    containerClasses: "mr-[10vw] rotate-0 ",
     bgSrc:
       "https://cdn.prod.website-files.com/669a8d6498ba88c08dfd2cd2/67852690dac98b3b6bf4f097_bg.svg",
     bottomImgSrc:
@@ -94,7 +94,7 @@ const flavours = [
     bg: "#7C3C1A",
     text: "#F47C37",
     name: "PEANUT BUTTER CHOCOLATE",
-    containerClasses: "mr-[10vw] rotate-0 lg:rotate-[5deg]",
+    containerClasses: "mr-[10vw] rotate-0 ",
     bgSrc:
       "https://cdn.prod.website-files.com/669a8d6498ba88c08dfd2cd2/678528bf31201056fa66e3b5_2bg.svg",
     bottomImgSrc:
@@ -116,7 +116,7 @@ const flavours = [
     bg: "#5E382E",
     text:"#C88E64",
     name: "MAX CHOCOLATE MILK",
-    containerClasses: "mr-[10vw] rotate-0 lg:rotate-[-5deg]",
+    containerClasses: "mr-[10vw] rotate-0",
     bgSrc:
       "https://cdn.prod.website-files.com/6707999f0e8f3bdab42cb624/678a346d7e435f4b6be31247_bg-1.svg",
     bottomImgSrc:

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import flavours from '../Components/FlavoursData';
+import flavours from '../../Components/FlavoursData';
 
 
 const PosterImg = () => {

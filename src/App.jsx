@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import Home from "./Pages/Home";
-import FlavourDetail from "./Pages/FlavourDetail";
+import FlavourDetailPage from "./Pages/FlavourDetailPage";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -13,7 +13,7 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/flavours/:id" element={<FlavourDetail />} />
+        <Route path="/flavours/:id" element={<FlavourDetailPage />} />
       </Routes>
     </Router>
   );

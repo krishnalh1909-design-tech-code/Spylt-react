@@ -1,128 +1,147 @@
-import { useRef, useEffect } from "react";
-// import flavoursdata from "../Components/FlavoursData";
+import { useRef } from "react";
+import { Link } from "react-router-dom";
+import flavoursdata from "../../Components/FlavoursData";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
-import FlavourCards from "../../Components/FlavourCards";
-import TextAnimation from "../../Components/TextAnimation";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Flavours = () => {
-  const letters = ["W", "E", "H", "A", "V", "E", "6"];
   const containerRef = useRef(null);
-  const letterRef = useRef(null);
-  const flavourRef = useRef(null);
-
-  const isMediumScreen = window.innerWidth <= 1024;
-
-  useEffect(() => {
-    let prevWidth = window.innerWidth;
-
-    const handleResize = () => {
-      const currentWidth = window.innerWidth;
-
-      const wasMedium = prevWidth <= 1024;
-      const isMedium = currentWidth <= 1024;
-
-      // If we crossed the medium breakpoint (in either direction)
-      if (wasMedium !== isMedium) {
-        window.location.reload();
-      }
-
-      prevWidth = currentWidth;
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
 
-  useGSAP(() => {
-    const ctx = gsap.context(() => {
-      const letterElements = letterRef.current?.querySelectorAll("h1");
 
-      if (letterElements) {
-        gsap.fromTo(
-          letterElements,
-          { y: 50, opacity: 0 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 0.6,
-            stagger: 0.05,
-            ease: "power3.out",
-            scrollTrigger: {
-              trigger: letterRef.current,
-              start: "top 80%",
-              toggleActions: "play none none none",
-            },
-          }
-        );
-      }
 
-      if (!isMediumScreen && containerRef.current) {
-        gsap.timeline({
-          scrollTrigger: {
-            trigger: containerRef.current,
-            start: "top top",
-            end: "+=3000",
-            pin: true,
-            scrub: true,
-          },
-        }).to(containerRef.current, {
-          x: "-300vw",
-        });
-      }
-    }, containerRef);
+   const handleMouseMove = (e, cardRef, topImgRef, bottomImgRef, bgImgRef) => {
+    const card = cardRef.current;
+    const rect = card.getBoundingClientRect();
 
-    return () => {
-      ctx.revert();
-      ScrollTrigger.refresh();
-    };
-  }, [isMediumScreen]);
+    // Get offset from center
+    const offsetX = e.clientX - rect.left - rect.width / 2;
+    const offsetY = e.clientY - rect.top - rect.height / 2;
+
+    // Clamp & dampen
+    const moveX = Math.max(-40, Math.min(offsetX * 0.25, 40));
+    const moveY = Math.max(-40, Math.min(offsetY * 0.25, 40));
+
+    // 🔁 3D rotation angles
+    const rotateY = Math.max(-10, Math.min(offsetX / (rect.width / 2) * 10, 10)); // Y-axis (left/right)
+    const rotateX = Math.max(-10, Math.min(-offsetY / (rect.height / 2) * 10, 10)); // X-axis (up/down) - negative to flip direction
+
+    // Animate topImg (XY)
+    if (topImgRef.current) {
+      gsap.to(topImgRef.current, {
+        x: moveX,
+        y: moveY,
+        duration: 0.4,
+        ease: "power3.out",
+      });
+    }
+
+    // Animate bottomImg (X only)
+    if (bottomImgRef.current) {
+      gsap.to(bottomImgRef.current, {
+        x: moveX * 0.6,
+        duration: 0.4,
+        ease: "power3.out",
+      });
+    }
+
+    // Animate bg with 3D tilt
+    if (cardRef.current) {
+      gsap.to(cardRef.current, {
+        rotateY,
+        rotateX,
+        transformPerspective: 1000,
+        transformOrigin: "center",
+        duration: 0.4,
+        ease: "power3.out",
+      });
+    }
+  };
+
+
+
+    const handleMouseLeave = (topImgRef, bottomImgRef, cardRef) => {
+    if (topImgRef.current) {
+      gsap.to(topImgRef.current, {
+        x: 0,
+        y: 0,
+        duration: 0.6,
+        ease: "power3.out",
+      });
+    }
+
+    if (bottomImgRef.current) {
+      gsap.to(bottomImgRef.current, {
+        x: 0,
+        duration: 0.6,
+        ease: "power3.out",
+      });
+    }
+
+    if (cardRef.current) {
+      gsap.to(cardRef.current, {
+        rotateX: 0,
+        rotateY: 0,
+        duration: 0.6,
+        ease: "power3.out",
+      });
+    }
+  };
+
+
 
   return (
     <div
       ref={containerRef}
-      className="flavours min-h-screen w-[100vw] md:w-[100vw] md:flex-col lg:w-[410vw] relative bg-[#FAEADE] flex flex-col lg:flex-row"
+      className="flavours min-h-screen w-full md:flex-col relative flex flex-col bg-green-400"
     >
+      <div className="flavours w-full h-full md:w-[100vw] flex flex-col items-center justify-between overflow-x-auto md:overflow-hidden bg-amber-300">
+        {flavoursdata.map(({ id, containerClasses, bgSrc, bottomImgSrc, topImgSrc }) => {
+          const cardRef = useRef(null);
+          const topImgRef = useRef(null);
+          const bottomImgRef = useRef(null);
+          const bgImgRef = useRef(null); 
 
-      {/* <div
-        ref={letterRef}
-        className="we-have w-full md:w-[48vw] flex flex-col items-center justify-center font-[Antonio] text-[#523122] text-[10vw] md:text-[7vw] py-10 md:py-0 leading-[100px] bg-amber-300"
-      >
-        <div className="flex flex-wrap justify-center font-extrabold">
-          {letters.map((char, index) => (
-            <h1
-              key={index}
-              className={`inline-block ${index === 2 || index === 6 ? "ml-3 md:ml-5" : ""
-                }`}
+          return (
+            <Link
+              key={id}
+              ref={cardRef}
+              to={`/flavours/${id}`}
+              onMouseMove={(e) => handleMouseMove(e, cardRef, topImgRef, bottomImgRef,bgImgRef)}
+              onMouseLeave={() => handleMouseLeave(topImgRef, bottomImgRef)}
+              onClick={() => {
+                if (lenis) {
+                  lenis.scrollTo(0);
+                } else {
+                  window.scrollTo(0, 0);
+                }
+              }}
+              className={`flavour1 ${containerClasses} bg-green-400 card-bg w-[80%] h-[45vw] lg:w-[50%] lg:h-[55vh] rounded-3xl relative mx-auto mt-14 mb-3 lg:mt-56 lg:mx-10 lg:shrink-0`}
             >
-              {char}
-            </h1>
-          ))}
-        </div>
-
-        <div className="freaking h-[125px] font-extrabold flex flex-wrap justify-center text-[10vw] md:text-[7vw] bg-red-200 rotate-[-3deg]">
-          {"FREAKING".split("").map((char, index) => (
-            <span key={index}>{char}</span>
-          ))}
-        </div>
-
-        <div className="freaking font-extrabold flex flex-wrap justify-center text-[10vw] md:text-[6.5vw]">
-          {"DELICIOUS FLAVOUR".split("").map((char, index) => (
-            <span key={index} className={char === "S" ? "mr-2 md:mr-3" : ""}>
-              {char}
-            </span>
-          ))}
-        </div>
-      </div> */}
-
-      <FlavourCards />
+              <img
+                ref={bgImgRef}
+                src={bgSrc}
+                alt=""
+                className="w-full h-full object-cover rounded-3xl pointer-events-none"
+              />
+              <img
+                ref={bottomImgRef}
+                src={bottomImgSrc}
+                alt=""
+                className="bottomSrc absolute bottom-[0%] left-[25.5%] w-[35vw] lg:w-[25vw] lg:h-[35vw] pointer-events-none"
+              />
+              <img
+                ref={topImgRef}
+                src={topImgSrc}
+                alt=""
+                className="can snacks absolute top-[-15.5%] left-[7%] w-[60vw] lg:w-[40vw] pointer-events-none"
+              />
+            </Link>
+          );
+        })}
+      </div>
     </div>
   );
 };
