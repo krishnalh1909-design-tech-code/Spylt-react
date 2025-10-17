@@ -1,7 +1,7 @@
 import { useLenis } from '../Components/useLenis';
 import Loader from '../Components/Loader'
-import BgVid from '../Components/BgVid'
-import BgImg from '../Components/BgImg'
+import BgVid from '../Sections/HomeSection/BgVid'
+import BgImg from '../Sections/HomeSection/BgImg'
 import Hero from '../Sections/HomeSection/Hero'
 import TextWrapper from '../Sections/HomeSection/TextWrapper'
 import Flavours from '../Sections/HomeSection/Flavours'

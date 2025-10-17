@@ -95,9 +95,9 @@ const Flavours = () => {
   return (
     <div
       ref={containerRef}
-      className="flavours min-h-screen w-full md:flex-col relative flex flex-col bg-green-400"
+      className="flavours min-h-screen w-full md:flex-col relative flex flex-col bg-[#FAEADE]"
     >
-      <div className="flavours w-full h-full md:w-[100vw] flex flex-col items-center justify-between overflow-x-auto md:overflow-hidden bg-amber-300">
+      <div className="flavours w-full h-full md:w-[100vw] flex flex-col items-center justify-between overflow-x-auto md:overflow-hidden">
         {flavoursdata.map(({ id, containerClasses, bgSrc, bottomImgSrc, topImgSrc }) => {
           const cardRef = useRef(null);
           const topImgRef = useRef(null);

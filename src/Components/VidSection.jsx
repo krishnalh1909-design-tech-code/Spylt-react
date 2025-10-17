@@ -23,7 +23,7 @@ const VidSection = () => {
       const tl1 = gsap.timeline({
         scrollTrigger: {
           trigger: containerRef.current,
-          start: "-30% top",
+          start: "top top",
           end: "30% top",
           scrub: true,
         },
@@ -40,6 +40,7 @@ const VidSection = () => {
           start: "top top",
           end: "+=3500",
           scrub: 2,
+          // markers:true,
           pin: true,
         },
       });
@@ -61,14 +62,14 @@ const VidSection = () => {
         }, "a")
         .from(whatRef.current, {
           delay: 1,
-          duration: 4,
-          x: -350,
+          duration: 3,
+          x: -550,
           ease: "power1.inOut"
         }, "a")
         .from(talkRef.current, {
           delay: 1,
-          duration: 4,
-          x: 250,
+          duration: 3,
+          x: 750,
           ease: "power1.inOut"
         }, "a")
         .from(".cards", {
@@ -104,11 +105,11 @@ const VidSection = () => {
 
       <div ref={headRef} className="absolute top-[105%] page6 w-full h-[155vh] z-[50] leading-[21vw] px-[5vw] font-[Antonio] font-bold bg-[#c42222] overflow-hidden">
 
-        <h1 ref={whatRef} className="heading1 text-[20vw] text-end w-full">WHAT'S</h1>
-        <h1 className="heading2 text-[20vw] text-[#E3A458] text-center w-full">
+        <h1 ref={whatRef} className="heading1 mt-5 text-[20vw] text-end w-full">WHAT'S</h1>
+        <h1 className="heading2 text-[20vw] mt-5  text-[#E3A458] text-center w-full">
           EVERYONE
         </h1>
-        <h1 ref={talkRef} className="heading3 text-[20vw]">TALKING</h1>
+        <h1 ref={talkRef} className="heading3 text-[20vw] mt-5">TALKING</h1>
 
         {CardData.map(({ rotate, video }, index) => (
           <div

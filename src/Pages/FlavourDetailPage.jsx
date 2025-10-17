@@ -5,6 +5,8 @@ import PosterImg from '../Sections/FlavoursPageSection/FlavourPosterImg';
 import Flavours from "../Sections/HomeSection/Flavours";
 import Footer from "../Components/Footer";
 import { useLenis } from '../Components/useLenis';
+// import FlavourVidSection from '../Sections/FlavoursPageSection/FlavourVidSection';
+import VidSection from '../Components/VidSection';
 
 const FlavourDetailPage = () => {
    useLenis();
@@ -15,6 +17,7 @@ const FlavourDetailPage = () => {
       <FlavourHero />
       <PosterImg />
       <Flavours />
+    
       <Footer />
     </div>
   );
